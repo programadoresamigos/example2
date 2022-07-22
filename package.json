@@ -1,0 +1,38 @@
+{
+  "name": "igor-nodejs-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node bin/www",
+    "start:debug": "node --inspect-brk=9229 bin/www",
+    "test": "jest test/**",
+    "test:debug": "jest --inspect-brk=9229 test/**",
+    "test:unit": "jest test/unit/**",
+    "test:unit:debug": "jest --inspect-brk=9229 test/unit/**",
+    "test:integration": "jest test/integration/**",
+    "test:integration:debug": "jest --inspect-brk=9229 test/integration/**",
+    "test:acceptance": "jest test/acceptance/** ",
+    "test:acceptance:debug": "jest --inspect-brk=9229 test/acceptance/**",
+    "eslint": "eslint src/",
+    "eslint:fix": "eslint --fix src/",
+    "prettier": "prettier --check \"**/{*.js,*.json,bin/**}\"",
+    "prettier:fmt": "prettier --write \"**/{*.js,*.json,bin/**}\"",
+    "fmt:check": "yarn run prettier && yarn run eslint",
+    "fmt:fix": "yarn run prettier:fmt && yarn run eslint:fix"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.20.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "supertest": "^4.0.2"
+  }
+}
